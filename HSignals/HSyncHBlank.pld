@@ -1,0 +1,54 @@
+Name      HSyncHBlank;
+Partno    WWVC02;
+Date      14/11/23;
+Revision  01;
+Designer  ;
+Company   ;
+Assembly  ;
+Location  ;
+Device    g22V10;
+
+/* Inputs - Set to match the 10 bit counter */
+Pin 2  = I0;
+Pin 3  = I1;
+Pin 4  = I2;
+Pin 5  = I3;
+Pin 6  = I9;
+Pin 7  = I8;
+Pin 8  = I7;
+Pin 9  = I6;
+Pin 10 = I5;
+Pin 11 = I4;
+
+
+/* Outputs                                                            *
+ * 0 = Start of visible frame                                         *
+ * L200 = End of visible frame                                        *
+ * L210 = Start of HSync Pulse                                        *
+ * L242 = End of HSync Pulse                                          *
+ * L264 = Reset counter                                               *
+ * Hsync & HsyncB = Outputs of SR flip flop to produce sync pulse     *
+ * Hblank & HblankB = Outputs of SR flip flop for blanking output     */
+Pin 23 = L200;
+Pin 22 = L210;
+Pin 21 = L242;
+Pin 20 = L264;
+
+Pin 19 = Hsync;
+Pin 18 = HsyncB;
+
+Pin 17 = Hblank;
+Pin 16 = HblankB;
+
+/* Logic Equations */
+!L200 = !I9 & !I8 & I7 & I6 & !I5 & !I4 & I3 & !I2 & !I1 & !I0;
+!L210 = !I9 & !I8 & I7 & I6 & !I5 & I4 & !I3 & !I2 & I1 & !I0;
+!L242 = !I9 & !I8 & I7 & I6 & I5 & I4 & !I3 & !I2 & I1 & !I0;
+!L264 = !I9 & I8 & !I7 & !I6 & !I5 & !I4 & I3 & !I2 & !I1 & !I0;
+
+
+!Hsync = HsyncB & L242;
+!HsyncB = Hsync & L210;
+
+!Hblank = HblankB & L264;
+!HblankB = Hblank & L200;

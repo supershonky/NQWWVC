@@ -1,0 +1,53 @@
+Name      VSyncVBlank;
+Partno    WWVC03;
+Date      14/11/23;
+Revision  01;
+Designer  ;
+Company   ;
+Assembly  ;
+Location  ;
+Device    g22V10;
+
+/* Inputs - Set to match the 10 bit counter*/
+Pin 2  = I0;
+Pin 3  = I1;
+Pin 4  = I2;
+Pin 5  = I3;
+Pin 6  = I9;
+Pin 7  = I8;
+Pin 8  = I7;
+Pin 9  = I6;
+Pin 10 = I5;
+Pin 11 = I4;
+
+/* Outputs                                                            *
+ * 0 = Start of visible frame                                         *
+ * L600 = End of visible frame                                        *
+ * L601 = Start of HSync Pulse                                        *
+ * L605 = End of HSync Pulse                                          *
+ * L628 = Reset counter                                               *
+ * Vsync & VsyncB = Outputs of SR flip flop to produce sync pulse     *
+ * Vblank & VblankB = Outputs of SR flip flop for blanking output     */
+Pin 23 = L600;
+Pin 22 = L601;
+Pin 21 = L605;
+Pin 20 = L628;
+
+Pin 19 = Vsync;
+Pin 18 = VsyncB;
+
+Pin 17 = Vblank;
+Pin 16 = VblankB;
+
+/* Logic Equations */
+!L600 = I9 & !I8 & !I7 & I6 & !I5 & I4 & I3  & !I2 & !I1 & !I0;
+!L601 = I9 & !I8 & !I7 & I6 & !I5 & I4 & I3  & !I2 & !I1 & I0;
+!L605 = I9 & !I8 & !I7 & I6 & !I5 & I4 & I3  & I2  & !I1 & I0;
+!L628 = I9 & !I8 & !I7 & I6 &  I5 & I4 & !I3 & I2  & !I1 & !I0;
+
+
+!Vsync = VsyncB & L605;
+!VsyncB = Vsync & L601;
+
+!Vblank = VblankB & L628;
+!VblankB = Vblank & L600;

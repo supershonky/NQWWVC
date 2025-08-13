@@ -1,0 +1,74 @@
+%SIGNAL
+PIN  17 =  Hblank 
+PIN  16 =  HblankB 
+PIN  19 =  Hsync 
+PIN  18 =  HsyncB 
+PIN   2 =  I0 
+PIN   3 =  I1 
+PIN   4 =  I2 
+PIN   5 =  I3 
+PIN  11 =  I4 
+PIN  10 =  I5 
+PIN   9 =  I6 
+PIN   8 =  I7 
+PIN   7 =  I8 
+PIN   6 =  I9 
+PIN  23 =  L200 
+PIN  22 =  L210 
+PIN  21 =  L242 
+PIN  20 =  L264 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!Hblank =>
+    HblankB & L264
+
+!HblankB =>
+    Hblank & L200
+
+!Hsync =>
+    HsyncB & L242
+
+!HsyncB =>
+    Hsync & L210
+
+!L200 =>
+    !I0 & !I1 & !I2 & I3 & !I4 & !I5 & I6 & I7 & !I8 & !I9
+
+!L210 =>
+    !I0 & I1 & !I2 & !I3 & I4 & !I5 & I6 & I7 & !I8 & !I9
+
+!L242 =>
+    !I0 & I1 & !I2 & !I3 & I4 & I5 & I6 & I7 & !I8 & !I9
+
+!L264 =>
+    !I0 & !I1 & !I2 & I3 & !I4 & !I5 & !I6 & !I7 & I8 & !I9
+
+Hblank.oe  =>
+    1 
+
+HblankB.oe  =>
+    1 
+
+Hsync.oe  =>
+    1 
+
+HsyncB.oe  =>
+    1 
+
+L200.oe  =>
+    1 
+
+L210.oe  =>
+    1 
+
+L242.oe  =>
+    1 
+
+L264.oe  =>
+    1 
+
+%END

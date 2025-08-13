@@ -1,0 +1,145 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Tue Nov 14 22:07:13 2023
+
+LISTING FOR SIMULATION FILE: HSYNCHBLANK.si
+
+   1: Name     HSyncHBlank;
+   2: PartNo   CA0018;
+   3: Date     14/11/23;
+   4: Revision 01;
+   5: Designer Jayne;
+   6: Company  JAMS;
+   7: Assembly None;
+   8: Location None;
+   9: Device   g22V10;
+  10: 
+  11: 
+  12: ORDER: I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, L200, L210, L242, L264, Hblank, HblankB, Hsync, HsyncB; 
+  13: 
+  14: 
+
+===========================
+                     H     
+                    Hb H   
+                    blHs   
+                LLLLlasy   
+                2222anyn   
+      IIIIIIIIII0146nknc   
+      01234567890024kBcB   
+===========================
+0001: 1110001100HHHHXXXX
+                    ^^^^
+[0020sa] unstable output:  Hblank
+[0020sa] unstable output:  HblankB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hblank
+[0020sa] unstable output:  HblankB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hblank
+[0020sa] unstable output:  HblankB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hblank
+[0020sa] unstable output:  HblankB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hblank
+[0020sa] unstable output:  HblankB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0002: 0001001100LHHHLHXX
+                      ^^
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0003: 1001001100HHHHLHXX
+                      ^^
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0004: 0000000000HHHHLHXX
+                      ^^
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0005: 0000000000HHHHLHXX
+                      ^^
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0006: 1000101100HHHHLHXX
+                      ^^
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+[0020sa] unstable output:  Hsync
+[0020sa] unstable output:  HsyncB
+
+0007: 0100101100HLHHLHLH
+0008: 1100101100HHHHLHLH
+0009: 0000000000HHHHLHLH
+0010: 0000000000HHHHLHLH
+0011: 0000000000HHHHLHLH
+0012: 1000111100HHHHLHLH
+0013: 0100111100HHLHLHHL
+0014: 1100111100HHHHLHHL
+0015: 0000000000HHHHLHHL
+0016: 0000000000HHHHLHHL
+0017: 0000000000HHHHLHHL
+0018: 1110000010HHHHLHHL
+0019: 0001000010HHHLHLHL
+0020: 1001000010HHHHHLHL
+0021: 0000000000HHHHHLHL
+0022: 0000000000HHHHHLHL
+0023: 0000000000HHHHHLHL
+0024: 0000000000HHHHHLHL
+0025: 0000000000HHHHHLHL
+0026: 0000000000HHHHHLHL
+0027: 0000000000HHHHHLHL
+0028: 0000000000HHHHHLHL
+0029: 0000000000HHHHHLHL
+0030: 0000000000HHHHHLHL
+0031: 0000000000HHHHHLHL
+0032: 0000000000HHHHHLHL

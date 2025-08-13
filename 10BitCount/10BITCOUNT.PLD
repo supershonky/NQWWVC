@@ -1,0 +1,122 @@
+Name      10BitCount;
+Partno    WWVC01;
+Date      14/11/23;
+Revision  01;
+Designer  ;
+Company   ;
+Assembly  ;
+Location  ;
+Device    g22V10;
+
+/*********************************************************************/
+/* Compiling Note: For this Design , it will compile without any     */
+/* Errors if you Click on Options from the Main WInCUPL tool window  */
+/* and Select Compiler option and set Minimization button to PRESTO  */   
+/*                                                                   */
+/* Binary Counter                                                    */
+/*                                                                   */
+/* This is a 10-bit binary counter with clear(Active low)            */
+/*********************************************************************/
+
+/**  Inputs  **/
+
+Pin 1 = clk;			/* Counter clock */
+Pin 2 = clr;			/* Counter Clear */
+Pin 13 = !out_enable;  	/* Register Output Enable       */
+
+
+
+
+
+/** Outputs - NOTE: Pin arrangement takes into account product term limits *
+ *  as Q9 & Q8 in particular would exceed the limits for outer pins        **/
+Pin 19 = Q9;			/* Counter Output Bit 9 */
+Pin 18 = Q8;			/* Counter Output Bit 8 */
+Pin 17 = Q7;			/* Counter Output Bit 7 */
+Pin 16 = Q6;			/* Counter Output Bit 6 */
+Pin 15 = Q5;			/* Counter Output Bit 5 */
+Pin 14 = Q4;			/* Counter Output Bit 4 */
+Pin 20 = Q3;			/* Counter Output Bit 3 */
+Pin 21 = Q2;			/* Counter Output Bit 2 */
+Pin 22 = Q1;			/* Counter Output Bit 1 */
+Pin 23 = Q0;			/* Counter Output Bit 0 */
+
+field output = [Q9..0];         /* Outputs Field                */
+
+/** Logic Equations **/
+
+
+
+Q0.D =	clr & !Q0;
+
+Q1.D =	clr & Q1 & !Q0
+	# clr & !Q1 & Q0;
+
+Q2.D = clr & Q2 & !Q0
+	# clr & Q2 & !Q1
+	# clr & !Q2 & Q1 & Q0;
+
+Q3.D = clr & Q3 & !Q0
+	# clr & Q3 & !Q1
+	# clr & Q3 & !Q2
+	# clr & !Q3 & Q2 & Q1 & Q0;
+
+Q4.D = clr & Q4 & !Q0
+	# clr & Q4 & !Q1
+	# clr & Q4 & !Q2
+	# clr & Q4 & !Q3
+	# clr & !Q4 &Q3 & Q2 & Q1 & Q0;
+
+Q5.D = clr & Q5 & !Q0
+	# clr & Q5 & !Q1
+	# clr & Q5 & !Q2
+	# clr & Q5 & !Q3
+	# clr & Q5 & !Q4
+	# clr & !Q5 & Q4 &Q3 & Q2 & Q1 & Q0;
+
+Q6.D = clr & Q6 & !Q0
+	# clr & Q6 & !Q1
+	# clr & Q6 & !Q2
+	# clr & Q6 & !Q3
+	# clr & Q6 & !Q4
+	# clr & Q6 & !Q5
+	# clr & !Q6 & Q5 & Q4 &Q3 & Q2 & Q1 & Q0;
+
+Q7.D = clr & Q7 & !Q0
+	# clr & Q7 & !Q1
+	# clr & Q7 & !Q2
+	# clr & Q7 & !Q3
+	# clr & Q7 & !Q4
+	# clr & Q7 & !Q5
+	# clr & Q7 & !Q6
+	# clr & !Q7 & Q6 & Q5 & Q4 &Q3 & Q2 & Q1 & Q0;
+
+Q8.D = clr & Q8 & !Q0
+	# clr & Q8 & !Q1
+	# clr & Q8 & !Q2
+	# clr & Q8 & !Q3
+	# clr & Q8 & !Q4
+	# clr & Q8 & !Q5
+	# clr & Q8 & !Q6
+	# clr & Q8 & !Q7
+	# clr & !Q8 & Q7 & Q6 & Q5 & Q4 &Q3 & Q2 & Q1 & Q0;
+
+Q9.D = clr & Q9 & !Q0
+	# clr & Q9 & !Q1
+	# clr & Q9 & !Q2
+	# clr & Q9 & !Q3
+	# clr & Q9 & !Q4
+	# clr & Q9 & !Q5
+	# clr & Q9 & !Q6
+	# clr & Q9 & !Q7
+	# clr & Q9 & !Q8
+	# clr & !Q9 & Q8 & Q7 & Q6 & Q5 & Q4 &Q3 & Q2 & Q1 & Q0;
+
+
+
+
+
+output.sp = 'h'00;
+output.ar = 'h'00;
+output.oe = out_enable;         /* tri-state control            */
+

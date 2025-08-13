@@ -1,0 +1,111 @@
+
+*******************************************************************************
+                                  HSyncHBlank
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g22v10  Library DLIB-h-40-1
+Created         Tue Nov 14 22:06:35 2023
+Name            HSyncHBlank
+Partno          CA0018
+Revision        01
+Date            14/11/23
+Designer        Jayne
+Company         JAMS
+Assembly        None
+Location        None
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+!Hblank =>
+    HblankB & L264
+
+!HblankB =>
+    Hblank & L200
+
+!Hsync =>
+    HsyncB & L242
+
+!HsyncB =>
+    Hsync & L210
+
+!L200 =>
+    !I0 & !I1 & !I2 & I3 & !I4 & !I5 & I6 & I7 & !I8 & !I9
+
+!L210 =>
+    !I0 & I1 & !I2 & !I3 & I4 & !I5 & I6 & I7 & !I8 & !I9
+
+!L242 =>
+    !I0 & I1 & !I2 & !I3 & I4 & I5 & I6 & I7 & !I8 & !I9
+
+!L264 =>
+    !I0 & !I1 & !I2 & I3 & !I4 & !I5 & !I6 & !I7 & I8 & !I9
+
+Hblank.oe  =>
+    1 
+
+HblankB.oe  =>
+    1 
+
+Hsync.oe  =>
+    1 
+
+HsyncB.oe  =>
+    1 
+
+L200.oe  =>
+    1 
+
+L210.oe  =>
+    1 
+
+L242.oe  =>
+    1 
+
+L264.oe  =>
+    1 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    Hblank                      17       V        1       14      2     
+    HblankB                     16       V        1       12      2     
+    Hsync                       19       V        1       16      2     
+    HsyncB                      18       V        1       16      2     
+    I0                          2        V        -       -       -     
+    I1                          3        V        -       -       -     
+    I2                          4        V        -       -       -     
+    I3                          5        V        -       -       -     
+    I4                          11       V        -       -       -     
+    I5                          10       V        -       -       -     
+    I6                          9        V        -       -       -     
+    I7                          8        V        -       -       -     
+    I8                          7        V        -       -       -     
+    I9                          6        V        -       -       -     
+    L200                        23       V        1       8       2     
+    L210                        22       V        1       10      2     
+    L242                        21       V        1       12      2     
+    L264                        20       V        1       14      2     
+    Hblank              oe      17       D        1       1       0     
+    HblankB             oe      16       D        1       1       0     
+    Hsync               oe      19       D        1       1       0     
+    HsyncB              oe      18       D        1       1       0     
+    L200                oe      23       D        1       1       0     
+    L210                oe      22       D        1       1       0     
+    L242                oe      21       D        1       1       0     
+    L264                oe      20       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+

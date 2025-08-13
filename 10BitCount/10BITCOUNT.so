@@ -1,0 +1,69 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Tue Nov 14 19:44:36 2023
+
+LISTING FOR SIMULATION FILE: 10BITCOUNT.si
+
+   1: Name     10BitCount;
+   2: PartNo   CA0018;
+   3: Date     02/04/21;
+   4: Revision 01;
+   5: Designer Jayne;
+   6: Company  JAMS;
+   7: Assembly None;
+   8: Location None;
+   9: Device   g22V10;
+  10: 
+  11: 
+  12: FIELD output = [Q9,Q8,Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0];
+  13:
+  14: ORDER: clk, clr, !out_enable, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9; 
+  15: 
+  16: 
+
+======================
+        !             
+        o             
+        u             
+        t             
+        _             
+        e             
+        n             
+        a             
+      ccb             
+      lllQQQQQQQQQQ   
+      kre0123456789   
+======================
+0001: K10HLLLLLLLLL
+0002: K10LHLLLLLLLL
+0003: K10HHLLLLLLLL
+0004: K10LLHLLLLLLL
+0005: K10HLHLLLLLLL
+0006: K10LHHLLLLLLL
+0007: K10HHHLLLLLLL
+0008: K10LLLHLLLLLL
+0009: K10HLLHLLLLLL
+0010: K10LHLHLLLLLL
+0011: K10HHLHLLLLLL
+0012: K10LLHHLLLLLL
+0013: K00LLLLLLLLLL
+0014: K10HLLLLLLLLL
+0015: K10LHLLLLLLLL
+0016: K10HHLLLLLLLL
+0017: K10LLHLLLLLLL
+0018: K10HLHLLLLLLL
+0019: K10LHHLLLLLLL
+0020: K10HHHLLLLLLL
+0021: K10LLLHLLLLLL
+0022: K10HLLHLLLLLL
+0023: K10LHLHLLLLLL
+0024: K10HHLHLLLLLL
+0025: K10LLHHLLLLLL
+0026: K10HLHHLLLLLL
+0027: K10LHHHLLLLLL
+0028: K10HHHHLLLLLL
+0029: K10LLLLHLLLLL
+0030: K10HLLLHLLLLL
+0031: K10LHLLHLLLLL
+0032: K10HHLLHLLLLL

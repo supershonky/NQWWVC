@@ -1,0 +1,259 @@
+
+*******************************************************************************
+                                  10BitCount
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g22v10  Library DLIB-h-40-1
+Created         Tue Nov 14 19:44:36 2023
+Name            10BitCount
+Partno          CA0018
+Revision        01
+Date            02/04/21
+Designer        Jayne
+Company         JAMS
+Assembly        None
+Location        None
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+Q0.d  =>
+    !Q0 & clr
+
+Q0.ar  =>
+    0 
+
+Q0.oe  =>
+    out_enable
+
+Q0.sp  =>
+    0 
+
+Q1.d  =>
+    !Q0 & Q1 & clr
+  # Q0 & !Q1 & clr
+
+Q1.ar  =>
+    0 
+
+Q1.oe  =>
+    out_enable
+
+Q1.sp  =>
+    0 
+
+Q2.d  =>
+    !Q0 & Q2 & clr
+  # !Q1 & Q2 & clr
+  # Q0 & Q1 & !Q2 & clr
+
+Q2.ar  =>
+    0 
+
+Q2.oe  =>
+    out_enable
+
+Q2.sp  =>
+    0 
+
+Q3.d  =>
+    !Q0 & Q3 & clr
+  # !Q1 & Q3 & clr
+  # !Q2 & Q3 & clr
+  # Q0 & Q1 & Q2 & !Q3 & clr
+
+Q3.ar  =>
+    0 
+
+Q3.oe  =>
+    out_enable
+
+Q3.sp  =>
+    0 
+
+Q4.d  =>
+    !Q0 & Q4 & clr
+  # !Q1 & Q4 & clr
+  # !Q2 & Q4 & clr
+  # !Q3 & Q4 & clr
+  # Q0 & Q1 & Q2 & Q3 & !Q4 & clr
+
+Q4.ar  =>
+    0 
+
+Q4.oe  =>
+    out_enable
+
+Q4.sp  =>
+    0 
+
+Q5.d  =>
+    !Q0 & Q5 & clr
+  # !Q1 & Q5 & clr
+  # !Q2 & Q5 & clr
+  # !Q3 & Q5 & clr
+  # !Q4 & Q5 & clr
+  # Q0 & Q1 & Q2 & Q3 & Q4 & !Q5 & clr
+
+Q5.ar  =>
+    0 
+
+Q5.oe  =>
+    out_enable
+
+Q5.sp  =>
+    0 
+
+Q6.d  =>
+    !Q0 & Q6 & clr
+  # !Q1 & Q6 & clr
+  # !Q2 & Q6 & clr
+  # !Q3 & Q6 & clr
+  # !Q4 & Q6 & clr
+  # !Q5 & Q6 & clr
+  # Q0 & Q1 & Q2 & Q3 & Q4 & Q5 & !Q6 & clr
+
+Q6.ar  =>
+    0 
+
+Q6.oe  =>
+    out_enable
+
+Q6.sp  =>
+    0 
+
+Q7.d  =>
+    !Q0 & Q7 & clr
+  # !Q1 & Q7 & clr
+  # !Q2 & Q7 & clr
+  # !Q3 & Q7 & clr
+  # !Q4 & Q7 & clr
+  # !Q5 & Q7 & clr
+  # !Q6 & Q7 & clr
+  # Q0 & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & !Q7 & clr
+
+Q7.ar  =>
+    0 
+
+Q7.oe  =>
+    out_enable
+
+Q7.sp  =>
+    0 
+
+Q8.d  =>
+    !Q0 & Q8 & clr
+  # !Q1 & Q8 & clr
+  # !Q2 & Q8 & clr
+  # !Q3 & Q8 & clr
+  # !Q4 & Q8 & clr
+  # !Q5 & Q8 & clr
+  # !Q6 & Q8 & clr
+  # !Q7 & Q8 & clr
+  # Q0 & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & !Q8 & clr
+
+Q8.ar  =>
+    0 
+
+Q8.oe  =>
+    out_enable
+
+Q8.sp  =>
+    0 
+
+Q9.d  =>
+    !Q0 & Q9 & clr
+  # !Q1 & Q9 & clr
+  # !Q2 & Q9 & clr
+  # !Q3 & Q9 & clr
+  # !Q4 & Q9 & clr
+  # !Q5 & Q9 & clr
+  # !Q6 & Q9 & clr
+  # !Q7 & Q9 & clr
+  # !Q8 & Q9 & clr
+  # Q0 & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & !Q9 & clr
+
+Q9.ar  =>
+    0 
+
+Q9.oe  =>
+    out_enable
+
+Q9.sp  =>
+    0 
+
+output =>
+    Q9 , Q8 , Q7 , Q6 , Q5 , Q4 , Q3 , Q2 , Q1 , Q0
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    Q0                          23       V        -       -       -     
+    Q0                  d       23       X        1       8       3     
+    Q0                  ar      23       X        1       1       1     
+    Q0                  oe      23       X        1       1       1     
+    Q0                  sp      23       X        1       1       1     
+    Q1                          22       V        -       -       -     
+    Q1                  d       22       X        2       10      3     
+    Q1                  ar      22       X        1       1       1     
+    Q1                  oe      22       X        1       1       1     
+    Q1                  sp      22       X        1       1       1     
+    Q2                          21       V        -       -       -     
+    Q2                  d       21       X        3       12      3     
+    Q2                  ar      21       X        1       1       1     
+    Q2                  oe      21       X        1       1       1     
+    Q2                  sp      21       X        1       1       1     
+    Q3                          20       V        -       -       -     
+    Q3                  d       20       X        4       14      3     
+    Q3                  ar      20       X        1       1       1     
+    Q3                  oe      20       X        1       1       1     
+    Q3                  sp      20       X        1       1       1     
+    Q4                          14       V        -       -       -     
+    Q4                  d       14       X        5       8       3     
+    Q4                  ar      14       X        1       1       1     
+    Q4                  oe      14       X        1       1       1     
+    Q4                  sp      14       X        1       1       1     
+    Q5                          15       V        -       -       -     
+    Q5                  d       15       X        6       10      3     
+    Q5                  ar      15       X        1       1       1     
+    Q5                  oe      15       X        1       1       1     
+    Q5                  sp      15       X        1       1       1     
+    Q6                          16       V        -       -       -     
+    Q6                  d       16       X        7       12      3     
+    Q6                  ar      16       X        1       1       1     
+    Q6                  oe      16       X        1       1       1     
+    Q6                  sp      16       X        1       1       1     
+    Q7                          17       V        -       -       -     
+    Q7                  d       17       X        8       14      3     
+    Q7                  ar      17       X        1       1       1     
+    Q7                  oe      17       X        1       1       1     
+    Q7                  sp      17       X        1       1       1     
+    Q8                          18       V        -       -       -     
+    Q8                  d       18       X        9       16      3     
+    Q8                  ar      18       X        1       1       1     
+    Q8                  oe      18       X        1       1       1     
+    Q8                  sp      18       X        1       1       1     
+    Q9                          19       V        -       -       -     
+    Q9                  d       19       X        10      16      3     
+    Q9                  ar      19       X        1       1       1     
+    Q9                  oe      19       X        1       1       1     
+    Q9                  sp      19       X        1       1       1     
+    clk                         1        V        -       -       -     
+    clr                         2        V        -       -       -     
+ !  out_enable                  13       V        -       -       -     
+    output                      0        F        -       -       -     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+

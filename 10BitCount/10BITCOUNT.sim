@@ -1,0 +1,169 @@
+%SIGNAL
+PIN  23 =  Q0 
+PIN  22 =  Q1 
+PIN  21 =  Q2 
+PIN  20 =  Q3 
+PIN  14 =  Q4 
+PIN  15 =  Q5 
+PIN  16 =  Q6 
+PIN  17 =  Q7 
+PIN  18 =  Q8 
+PIN  19 =  Q9 
+PIN   1 =  clk 
+PIN   2 =  clr 
+PIN  13 = !out_enable 
+%END
+
+%FIELD
+FIELD output = Q9,Q8,Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0
+%END
+
+%EQUATION
+Q0.d  =>
+    Q0 & clr
+
+Q0.ar Q1.ar Q2.ar Q3.ar Q4.ar Q5.ar Q6.ar Q7.ar Q8.ar Q9.ar  =>
+    0 
+
+Q0.oe  =>
+    !out_enable
+
+Q0.sp Q1.sp Q2.sp Q3.sp Q4.sp Q5.sp Q6.sp Q7.sp Q8.sp Q9.sp  =>
+    0 
+
+Q1.d  =>
+    Q0 & !Q1 & clr
+  # !Q0 & Q1 & clr
+
+Q1.ar  =>
+    
+Q1.oe  =>
+    !out_enable
+
+Q1.sp  =>
+    
+Q2.d  =>
+    Q0 & !Q2 & clr
+  # Q1 & !Q2 & clr
+  # !Q0 & !Q1 & Q2 & clr
+
+Q2.ar  =>
+    
+Q2.oe  =>
+    !out_enable
+
+Q2.sp  =>
+    
+Q3.d  =>
+    Q0 & !Q3 & clr
+  # Q1 & !Q3 & clr
+  # Q2 & !Q3 & clr
+  # !Q0 & !Q1 & !Q2 & Q3 & clr
+
+Q3.ar  =>
+    
+Q3.oe  =>
+    !out_enable
+
+Q3.sp  =>
+    
+Q4.d  =>
+    Q0 & !Q4 & clr
+  # Q1 & !Q4 & clr
+  # Q2 & !Q4 & clr
+  # Q3 & !Q4 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & Q4 & clr
+
+Q4.ar  =>
+    
+Q4.oe  =>
+    !out_enable
+
+Q4.sp  =>
+    
+Q5.d  =>
+    Q0 & !Q5 & clr
+  # Q1 & !Q5 & clr
+  # Q2 & !Q5 & clr
+  # Q3 & !Q5 & clr
+  # Q4 & !Q5 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & !Q4 & Q5 & clr
+
+Q5.ar  =>
+    
+Q5.oe  =>
+    !out_enable
+
+Q5.sp  =>
+    
+Q6.d  =>
+    Q0 & !Q6 & clr
+  # Q1 & !Q6 & clr
+  # Q2 & !Q6 & clr
+  # Q3 & !Q6 & clr
+  # Q4 & !Q6 & clr
+  # Q5 & !Q6 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & !Q4 & !Q5 & Q6 & clr
+
+Q6.ar  =>
+    
+Q6.oe  =>
+    !out_enable
+
+Q6.sp  =>
+    
+Q7.d  =>
+    Q0 & !Q7 & clr
+  # Q1 & !Q7 & clr
+  # Q2 & !Q7 & clr
+  # Q3 & !Q7 & clr
+  # Q4 & !Q7 & clr
+  # Q5 & !Q7 & clr
+  # Q6 & !Q7 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & !Q4 & !Q5 & !Q6 & Q7 & clr
+
+Q7.ar  =>
+    
+Q7.oe  =>
+    !out_enable
+
+Q7.sp  =>
+    
+Q8.d  =>
+    Q0 & !Q8 & clr
+  # Q1 & !Q8 & clr
+  # Q2 & !Q8 & clr
+  # Q3 & !Q8 & clr
+  # Q4 & !Q8 & clr
+  # Q5 & !Q8 & clr
+  # Q6 & !Q8 & clr
+  # Q7 & !Q8 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & !Q4 & !Q5 & !Q6 & !Q7 & Q8 & clr
+
+Q8.ar  =>
+    
+Q8.oe  =>
+    !out_enable
+
+Q8.sp  =>
+    
+Q9.d  =>
+    Q0 & !Q9 & clr
+  # Q1 & !Q9 & clr
+  # Q2 & !Q9 & clr
+  # Q3 & !Q9 & clr
+  # Q4 & !Q9 & clr
+  # Q5 & !Q9 & clr
+  # Q6 & !Q9 & clr
+  # Q7 & !Q9 & clr
+  # Q8 & !Q9 & clr
+  # !Q0 & !Q1 & !Q2 & !Q3 & !Q4 & !Q5 & !Q6 & !Q7 & !Q8 & Q9 & clr
+
+Q9.ar  =>
+    
+Q9.oe  =>
+    !out_enable
+
+Q9.sp  =>
+    
+%END

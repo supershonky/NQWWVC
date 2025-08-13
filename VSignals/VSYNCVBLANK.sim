@@ -1,0 +1,74 @@
+%SIGNAL
+PIN   2 =  I0 
+PIN   3 =  I1 
+PIN   4 =  I2 
+PIN   5 =  I3 
+PIN  11 =  I4 
+PIN  10 =  I5 
+PIN   9 =  I6 
+PIN   8 =  I7 
+PIN   7 =  I8 
+PIN   6 =  I9 
+PIN  23 =  L600 
+PIN  22 =  L601 
+PIN  21 =  L605 
+PIN  20 =  L628 
+PIN  17 =  Vblank 
+PIN  16 =  VblankB 
+PIN  19 =  Vsync 
+PIN  18 =  VsyncB 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!L600 =>
+    !I0 & !I1 & !I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L601 =>
+    I0 & !I1 & !I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L605 =>
+    I0 & !I1 & I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L628 =>
+    !I0 & !I1 & I2 & !I3 & I4 & I5 & I6 & !I7 & !I8 & I9
+
+!Vblank =>
+    L628 & VblankB
+
+!VblankB =>
+    L600 & Vblank
+
+!Vsync =>
+    L605 & VsyncB
+
+!VsyncB =>
+    L601 & Vsync
+
+L600.oe  =>
+    1 
+
+L601.oe  =>
+    1 
+
+L605.oe  =>
+    1 
+
+L628.oe  =>
+    1 
+
+Vblank.oe  =>
+    1 
+
+VblankB.oe  =>
+    1 
+
+Vsync.oe  =>
+    1 
+
+VsyncB.oe  =>
+    1 
+
+%END

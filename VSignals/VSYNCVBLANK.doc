@@ -1,0 +1,111 @@
+
+*******************************************************************************
+                                  VSyncVBlank
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g22v10  Library DLIB-h-40-1
+Created         Wed Nov 15 12:52:28 2023
+Name            VSyncVBlank
+Partno          CA0018
+Revision        01
+Date            14/11/23
+Designer        Jayne
+Company         JAMS
+Assembly        None
+Location        None
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+!L600 =>
+    !I0 & !I1 & !I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L601 =>
+    I0 & !I1 & !I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L605 =>
+    I0 & !I1 & I2 & I3 & I4 & !I5 & I6 & !I7 & !I8 & I9
+
+!L628 =>
+    !I0 & !I1 & I2 & !I3 & I4 & I5 & I6 & !I7 & !I8 & I9
+
+!Vblank =>
+    L628 & VblankB
+
+!VblankB =>
+    L600 & Vblank
+
+!Vsync =>
+    L605 & VsyncB
+
+!VsyncB =>
+    L601 & Vsync
+
+L600.oe  =>
+    1 
+
+L601.oe  =>
+    1 
+
+L605.oe  =>
+    1 
+
+L628.oe  =>
+    1 
+
+Vblank.oe  =>
+    1 
+
+VblankB.oe  =>
+    1 
+
+Vsync.oe  =>
+    1 
+
+VsyncB.oe  =>
+    1 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    I0                          2        V        -       -       -     
+    I1                          3        V        -       -       -     
+    I2                          4        V        -       -       -     
+    I3                          5        V        -       -       -     
+    I4                          11       V        -       -       -     
+    I5                          10       V        -       -       -     
+    I6                          9        V        -       -       -     
+    I7                          8        V        -       -       -     
+    I8                          7        V        -       -       -     
+    I9                          6        V        -       -       -     
+    L600                        23       V        1       8       2     
+    L601                        22       V        1       10      2     
+    L605                        21       V        1       12      2     
+    L628                        20       V        1       14      2     
+    Vblank                      17       V        1       14      2     
+    VblankB                     16       V        1       12      2     
+    Vsync                       19       V        1       16      2     
+    VsyncB                      18       V        1       16      2     
+    L600                oe      23       D        1       1       0     
+    L601                oe      22       D        1       1       0     
+    L605                oe      21       D        1       1       0     
+    L628                oe      20       D        1       1       0     
+    Vblank              oe      17       D        1       1       0     
+    VblankB             oe      16       D        1       1       0     
+    Vsync               oe      19       D        1       1       0     
+    VsyncB              oe      18       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+
